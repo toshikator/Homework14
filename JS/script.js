@@ -7,18 +7,35 @@ function checkPalindrome(){
     const stringForCheck = normalizeStringForReverse(palindrome_input.value);
     palindrome_res_span.textContent = isPalindrome(stringForCheck).toString();
 }
-function isPalindrome(str){
-    palindrome_input.value = '';
-    const strArr1 = str.split('');
-    const strArr2 = (str.split('').reverse());
-    let result = true;
-    for (let strArrIterator = 0; strArrIterator < strArr1.length; strArrIterator++) {
-        if (strArr1[strArrIterator] !== strArr2[strArrIterator]) {
-            result = false;
-        }
-    }
-    return result;
-}
+
+
+ function isPalindrome(str){
+     palindrome_input.value = '';
+     let result = true;
+     for (let strArrIterator = 0; strArrIterator < str.length; strArrIterator++){
+         if (str.at(strArrIterator) !== str.at((str.length - 1 - strArrIterator))) {
+             result = false;
+         }
+     }
+     return result;
+ }
+
+
+
+
+
+// function isPalindrome(str){
+//     palindrome_input.value = '';
+//     const strArr1 = str.split('');
+//     const strArr2 = (str.split('').reverse());
+//     let result = true;
+//     for (let strArrIterator = 0; strArrIterator < strArr1.length; strArrIterator++) {
+//         if (strArr1[strArrIterator] !== strArr2[strArrIterator]) {
+//             result = false;
+//         }
+//     }
+//     return result;
+// }
 
 //REVERSE BLOCK
 const reverse_input = document.getElementById('reverse_input');
