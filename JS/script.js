@@ -12,15 +12,13 @@ function checkPalindrome(){
  function isPalindrome(str){
      palindrome_input.value = '';
      let result = true;
-     for (let strArrIterator = 0; strArrIterator < str.length; strArrIterator++){
+     for (let strArrIterator = 0; strArrIterator < (str.length/2); strArrIterator++){
          if (str.at(strArrIterator) !== str.at((str.length - 1 - strArrIterator))) {
              result = false;
          }
      }
      return result;
  }
-
-
 
 
 
@@ -36,6 +34,7 @@ function checkPalindrome(){
 //     }
 //     return result;
 // }
+//lololo
 
 //REVERSE BLOCK
 const reverse_input = document.getElementById('reverse_input');
